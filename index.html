@@ -439,7 +439,6 @@ footer a{text-decoration:underline;text-underline-offset:3px}
             <li><span>Domínio .com.br e hospedagem</span></li>
             <li class="nao"><span>Galeria de fotos e portfólio</span></li>
             <li class="nao"><span>Cards e interações animadas</span></li>
-            <li class="nao"><span>Google Meu Negócio</span></li>
             <li><span>1 rodada de ajustes (até 3 meses)</span></li>
             <li><span>Entrega em <b>até 3 dias úteis</b></span></li>
           </ul>
@@ -448,7 +447,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         <div class="plano top rv d2">
           <span class="selo">RECOMENDADA</span>
           <h3>Landing Page Completa</h3>
-          <p class="sub">Para vender mais e aparecer no Maps.</p>
+          <p class="sub">Para mostrar todo o seu trabalho.</p>
           <span class="unico">Pagamento único · sem mensalidade</span>
           <ul class="itens">
             <li><span>Página com <b>até 9 seções</b></span></li>
@@ -457,7 +456,6 @@ footer a{text-decoration:underline;text-underline-offset:3px}
             <li><span>Domínio .com.br e hospedagem</span></li>
             <li><span>Galeria de fotos e portfólio</span></li>
             <li><span>Cards e interações animadas</span></li>
-            <li><span><b>Google Meu Negócio</b>, para aparecer no Maps</span></li>
             <li><span>2 rodadas de ajustes (até 6 meses)</span></li>
             <li><span>Entrega em <b>até 5 dias úteis</b></span></li>
           </ul>
@@ -509,11 +507,12 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         </div>
       </div>
       <div class="pergunta" data-q="1">
-        <h3>Sua empresa já aparece no Google Maps?</h3>
+        <h3>O que mais te faz perder cliente hoje?</h3>
         <div class="ops">
-          <button class="op" data-v="essencial" data-t="Já aparece no Google Maps"><span class="l">A</span>Sim, já aparece</button>
-          <button class="op" data-v="completa" data-t="Ainda não aparece no Google Maps"><span class="l">B</span>Ainda não</button>
-          <button class="op" data-v="completa" data-t="Não sei se aparece no Google Maps"><span class="l">C</span>Não sei</button>
+          <button class="op" data-v="essencial" data-t="Demora para responder e repete as mesmas informações" data-m="Você perde tempo repetindo as mesmas informações. A Essencial junta tudo num link só: o que você faz, onde atende e o botão do WhatsApp."><span class="l">A</span>Demoro para responder e repito as mesmas informações</button>
+          <button class="op" data-v="completa" data-t="O cliente não vê a qualidade do trabalho" data-m="O cliente não está vendo a qualidade do seu trabalho. A Completa tem galeria de fotos e portfólio para mostrar isso antes da conversa."><span class="l">B</span>O cliente não vê a qualidade do meu trabalho</button>
+          <button class="op" data-v="completa" data-t="Quem procura na internet não encontra" data-m="Quem te procura na internet não está te achando. A Completa vem com SEO estruturado, para o Google entender melhor o que você faz."><span class="l">C</span>Quem me procura na internet não me acha</button>
+          <button class="op" data-v="completa" data-t="Cliente pede orçamento e some" data-m="O cliente pede orçamento e some, sinal de que ainda não viu valor suficiente. A Completa tem até 9 seções para mostrar o seu trabalho antes do preço."><span class="l">D</span>Cliente pede orçamento e some</button>
         </div>
       </div>
       <div class="pergunta" data-q="2">
@@ -763,13 +762,14 @@ ioFinal.observe(document.getElementById("final"));
     qs.forEach(q => q.classList.remove("on")); prog.style.width = "100%";
     const completa = votos[0] === "completa" || votos[1] === "completa";
     let p;
+    const dor = qs[1].querySelector(".op.on");
+    const mDor = dor ? dor.dataset.m : "";
     if (completa) {
-      const motivos = [];
-      if (votos[0] === "completa") motivos.push("Você quer mostrar o seu trabalho, e a Completa tem galeria de fotos e portfólio para isso.");
-      if (votos[1] === "completa") motivos.push("Sua empresa ainda não aparece no Google Maps (ou você não tem certeza), e a Completa inclui o Google Meu Negócio para o cliente te achar no mapa.");
-      p = {n:"Landing Page Completa", v:"Pagamento único, sem mensalidade", m:motivos.join(" ") + " Fica pronta em até 5 dias úteis."};
+      let m = mDor;
+      if (votos[0] === "completa" && votos[1] === "essencial") m = "Você quer mostrar o seu trabalho, e a Completa tem galeria de fotos e portfólio para isso.";
+      p = {n:"Landing Page Completa", v:"Pagamento único, sem mensalidade", m:m + " Fica pronta em até 5 dias úteis."};
     } else {
-      p = {n:"Landing Page Essencial", v:"Pagamento único, sem mensalidade", m:"Você já aparece no Maps e precisa de um site direto ao ponto: o que você faz e um botão para o cliente te chamar. A Essencial fica pronta em até 3 dias úteis."};
+      p = {n:"Landing Page Essencial", v:"Pagamento único, sem mensalidade", m:mDor + " Fica pronta em até 3 dias úteis."};
     }
     document.getElementById("r-nome").textContent = p.n; document.getElementById("r-preco").textContent = p.v; document.getElementById("r-motivo").textContent = p.m;
     const cta = document.getElementById("r-cta");
