@@ -214,7 +214,7 @@ section{position:relative}
 
 /* portfolio */
 .cases{display:grid;gap:18px;margin-top:44px}
-.case{border-radius:var(--r-lg);overflow:hidden;background:var(--noite);color:var(--areia);display:grid;position:relative;min-height:420px}
+.case{border-radius:var(--r-lg);overflow:hidden;background:var(--noite);color:var(--areia);display:grid;grid-template-rows:auto 1fr;align-content:start;position:relative;min-height:420px}
 .case .pal{position:relative;display:flex;justify-content:center;align-items:flex-end;padding:36px 0 0;overflow:hidden;min-height:300px}
 .case .pal::before{content:"";position:absolute;bottom:-120px;left:50%;width:300px;height:300px;margin-left:-150px;border-radius:50%;background:var(--sol,var(--nascente));transition:transform .7s var(--ease)}
 .case:hover .pal::before{transform:translateY(-24px) scale(1.04)}
@@ -316,7 +316,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .nota-pag{grid-template-columns:1fr 1fr}
   .artes{grid-template-columns:repeat(5,1fr)}
   .quiz{padding:44px}
-  .cases{grid-template-columns:1fr 1fr}
+  .cases{grid-template-columns:repeat(3,1fr)}
   .quem{grid-template-columns:auto 1fr;gap:44px}
   .passos{grid-template-columns:repeat(5,1fr);padding-left:0;padding-top:52px;gap:20px}
   .passos .trilho{left:16px;right:16px;top:15px;bottom:auto;width:auto;height:3px}
@@ -599,6 +599,23 @@ footer a{text-decoration:underline;text-underline-offset:3px}
           <h3>Dra. Mariana Pinotti</h3>
           <p>Site para consultório com foto de fora a fora, caso real de antes e depois e agendamento pelo WhatsApp.</p>
           <a class="ver" href="https://dramarianapinotti.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="case rv d3">
+        <div class="pal" style="--sol:#B8955A">
+          <div class="fone">
+            <div class="tela">
+              <div class="bar" style="background:#2E2A27;color:#E9D9B8">Fernanda Agostini<i></i></div>
+              <div class="capa" style="background:#4A403A;color:#F3ECE2;min-height:150px"><small style="font-weight:700;letter-spacing:.08em;color:#D9BE8A">HARMONIZAÇÃO</small><b style="color:#F3ECE2">Sua beleza, com naturalidade.</b><span class="zap">Agendar avaliação</span></div>
+              <div class="grid"><div style="background:#E4DDD4"></div><div style="background:#E4DDD4"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="txt">
+          <span class="tag">Landing page · Harmonização</span>
+          <h3>Clínica Fernanda Agostini</h3>
+          <p>Site para clínica de harmonização facial e corporal, com a identidade da marca e agendamento direto pelo WhatsApp.</p>
+          <a class="ver" href="https://drafernandaagostini.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
     </div>
