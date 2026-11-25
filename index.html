@@ -218,7 +218,7 @@ section{position:relative}
 .case .pal{position:relative;display:flex;justify-content:center;align-items:flex-end;padding:36px 0 0;overflow:hidden;min-height:300px}
 .case .pal::before{content:"";position:absolute;bottom:-120px;left:50%;width:300px;height:300px;margin-left:-150px;border-radius:50%;background:var(--sol,var(--nascente));transition:transform .7s var(--ease)}
 .case:hover .pal::before{transform:translateY(-24px) scale(1.04)}
-.case .fone{position:relative;height:300px;border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0;transition:transform .6s var(--ease)}
+.case .fone{position:relative;width:220px;height:370px;border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0;transition:transform .6s var(--ease)}
 .case:hover .fone{transform:translateY(-10px)}
 .case .fone .tela{border-bottom-left-radius:0;border-bottom-right-radius:0}
 .case .txt{padding:28px;display:flex;flex-direction:column}
@@ -360,7 +360,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
       <p class="lead anima-in" style="animation-delay:.45s">Um site com a cara da sua marca, que te diferencia da concorrência e passa confiança antes do primeiro "oi". Pronto em <b>até 3 dias úteis</b>, com textos escritos por mim. <b>Pagamento único, sem mensalidade.</b></p>
       <div class="acoes anima-in" style="animation-delay:.6s">
         <a class="btn btn-sol" href="#pacotes">Ver pacotes</a>
-        <a class="btn btn-linha" href="#simulador">Simular meu site</a>
+        <a class="btn btn-linha" href="#portfolio">Ver portfólio</a>
       </div>
       <div class="selos anima-in" style="animation-delay:.75s">
         <span>Textos inclusos</span><span>Domínio e hospedagem inclusos</span><span>Atendo todo o Brasil</span>
@@ -382,32 +382,58 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   </div>
 </section>
 
-<!-- SIMULADOR -->
-<section class="sec sec-areia" id="simulador">
-  <div class="wrap sim">
+<!-- PORTFOLIO -->
+<section class="sec sec-areia" id="portfolio">
+  <div class="wrap">
     <div class="rv">
-      <span class="tag">Teste agora</span>
-      <h2 class="h2">Imagina a <span class="hl">sua marca</span> aqui.</h2>
-      <p class="lead">Digite o nome da sua empresa, escolha o ramo e veja uma prévia de como o seu site pode ficar no celular do cliente.</p>
-      <div class="campo">
-        <label for="nome">Nome da sua empresa</label>
-        <input id="nome" type="text" maxlength="28" placeholder="Ex.: Padaria Pão de Mel" autocomplete="off">
-        <label>Ramo</label>
-        <div class="chips" id="ramos"></div>
-        <label>Cor principal</label>
-        <div class="cores" id="cores"></div>
-      </div>
-      <a class="btn btn-noite" id="sim-cta" href="#">Quero um site assim</a>
+      <span class="tag">Portfólio</span>
+      <h2 class="h2">Sites que já estão <span class="hl">no ar.</span></h2>
     </div>
-    <div class="sim-palco rv d2">
-      <div class="fone" id="sim-fone">
-        <div class="tela">
-          <div class="bar" id="s-bar"><span id="s-nome">Sua Empresa</span><i></i></div>
-          <div class="capa" id="s-capa"><small id="s-local" style="font-weight:700;letter-spacing:.08em">CAFÉ E COZINHA</small><b id="s-titulo">O melhor café da cidade, perto de você.</b><small id="s-sub">Grãos especiais, torra fresca e entrega rápida.</small><span class="zap">Chamar no WhatsApp</span></div>
-          <div class="grid" id="s-grid"><div></div><div></div><div></div><div></div></div>
-          <div class="lin"></div><div class="lin" style="width:55%"></div>
+    <div class="cases">
+      <article class="case rv">
+        <div class="pal" style="--sol:#C0703F">
+          <div class="fone">
+            <div class="tela"><img src="img/case-cafezin.jpg" alt="Site do Cafézin Especial no celular" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+          </div>
         </div>
-      </div>
+        <div class="txt">
+          <span class="tag">Landing page · Café gourmet</span>
+          <h3>Cafézin Especial</h3>
+          <p>Vídeo de fundo, a linha de cafés em cards deslizáveis e pedido direto pelo WhatsApp.</p>
+          <a class="ver" href="https://cafezinespecial.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="case rv d2">
+        <div class="pal" style="--sol:#A4836B">
+          <div class="fone">
+            <div class="tela"><img src="img/case-mariana.jpg" alt="Site da Dra. Mariana Pinotti no celular" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+          </div>
+        </div>
+        <div class="txt">
+          <span class="tag">Landing page · Odontologia</span>
+          <h3>Dra. Mariana Pinotti</h3>
+          <p>Foto de fora a fora, caso real de antes e depois e agendamento direto pelo WhatsApp.</p>
+          <a class="ver" href="https://dramarianapinotti.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="case rv d3">
+        <div class="pal" style="--sol:#B8955A">
+          <div class="fone">
+            <div class="tela"><img src="img/case-fernanda.jpg" alt="Site da Clínica Fernanda Agostini no celular" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+          </div>
+        </div>
+        <div class="txt">
+          <span class="tag">Landing page · Estética</span>
+          <h3>Clínica Fernanda Agostini</h3>
+          <p>Clínica de estética com a identidade da marca, procedimentos organizados e agendamento pelo WhatsApp.</p>
+          <a class="ver" href="https://drafernandaagostini.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <div class="ig-card rv">
+      <div class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+      <div class="ig-txt"><b>Tem mais no Instagram.</b><span>Bastidores, novos cases e dicas para valorizar o seu trabalho.</span></div>
+      <a class="btn btn-noite" href="https://instagram.com/leste_studio" target="_blank" rel="noopener">Seguir @leste_studio</a>
     </div>
   </div>
 </section>
@@ -567,76 +593,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="sec sec-areia" id="portfolio">
-  <div class="wrap">
-    <div class="rv">
-      <span class="tag">Portfólio</span>
-      <h2 class="h2">Sites que já estão <span class="hl">no ar.</span></h2>
-    </div>
-    <div class="cases">
-      <article class="case rv">
-        <div class="pal" style="--sol:#C0703F">
-          <div class="fone">
-            <div class="tela">
-              <div class="bar" style="background:#3B2418;color:#F6EBDD">Cafézin Especial<i></i></div>
-              <div class="capa" style="background:#5A3523;color:#F6EBDD;min-height:150px"><small style="font-weight:700;letter-spacing:.08em">CAFÉ ESPECIAL</small><b style="color:#F6EBDD">Café de verdade, do grão à xícara.</b><span class="zap">Pedir no WhatsApp</span></div>
-              <div class="grid"><div style="background:#EADCC8"></div><div style="background:#EADCC8"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="txt">
-          <span class="tag">Landing page · Café gourmet</span>
-          <h3>Cafézin Especial</h3>
-          <p>Vídeo de fundo, a linha de cafés em cards deslizáveis e pedido direto pelo WhatsApp.</p>
-          <a class="ver" href="https://cafezinespecial.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-      <article class="case rv d2">
-        <div class="pal" style="--sol:#A4836B">
-          <div class="fone">
-            <div class="tela">
-              <div class="bar" style="background:#fff;color:#3E2C22">Dra. Mariana Pinotti<i></i></div>
-              <div class="capa" style="background:#E9DFD5;color:#3E2C22;min-height:150px"><small style="font-weight:700;letter-spacing:.08em">ODONTOLOGIA</small><b style="color:#3E2C22">Seu sorriso, cuidado com calma.</b><span class="zap">Agendar consulta</span></div>
-              <div class="grid"><div style="background:#d8cabd"></div><div style="background:#d8cabd"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="txt">
-          <span class="tag">Landing page · Odontologia</span>
-          <h3>Dra. Mariana Pinotti</h3>
-          <p>Foto de fora a fora, caso real de antes e depois e agendamento direto pelo WhatsApp.</p>
-          <a class="ver" href="https://dramarianapinotti.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-      <article class="case rv d3">
-        <div class="pal" style="--sol:#B8955A">
-          <div class="fone">
-            <div class="tela">
-              <div class="bar" style="background:#2E2A27;color:#E9D9B8">Fernanda Agostini<i></i></div>
-              <div class="capa" style="background:#4A403A;color:#F3ECE2;min-height:150px"><small style="font-weight:700;letter-spacing:.08em;color:#D9BE8A">ESTÉTICA</small><b style="color:#F3ECE2">Sua beleza, com naturalidade.</b><span class="zap">Agendar avaliação</span></div>
-              <div class="grid"><div style="background:#E4DDD4"></div><div style="background:#E4DDD4"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="txt">
-          <span class="tag">Landing page · Estética</span>
-          <h3>Clínica Fernanda Agostini</h3>
-          <p>Clínica de estética com a identidade da marca, procedimentos organizados e agendamento pelo WhatsApp.</p>
-          <a class="ver" href="https://drafernandaagostini.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-    </div>
-    <div class="ig-card rv">
-      <div class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-      <div class="ig-txt"><b>Tem mais no Instagram.</b><span>Bastidores, novos cases e dicas para valorizar o seu trabalho.</span></div>
-      <a class="btn btn-noite" href="https://instagram.com/leste_studio" target="_blank" rel="noopener">Seguir @leste_studio</a>
-    </div>
-  </div>
-</section>
-
 <!-- COMO FUNCIONA -->
-<section class="sec sec-areia" id="como" style="padding-top:0">
+<section class="sec sec-areia" id="como">
   <div class="wrap">
     <div class="rv">
       <span class="tag">Como funciona</span>
@@ -749,46 +707,6 @@ const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting
 document.querySelectorAll(".rv").forEach(el => io.observe(el));
 const ioFinal = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add("visivel")), {threshold:.3});
 ioFinal.observe(document.getElementById("final"));
-
-/* simulador */
-(() => {
-  const ramos = {
-    "Café / Restaurante": {t:"O melhor café da cidade, perto de você.", s:"Cardápio, horário e pedido pelo WhatsApp.", tag:"CAFÉ E COZINHA"},
-    "Saúde": {t:"Cuidado de verdade, com hora marcada.", s:"Tratamentos, convênios e agendamento rápido.", tag:"SAÚDE"},
-    "Advocacia": {t:"Seus direitos, explicados sem complicação.", s:"Áreas de atuação e atendimento pelo WhatsApp.", tag:"ADVOCACIA"},
-    "Beleza": {t:"Seu horário marcado em um toque.", s:"Serviços, fotos dos trabalhos e agenda aberta.", tag:"BELEZA E ESTÉTICA"},
-    "Loja": {t:"Tudo o que você procura, aqui na cidade.", s:"Produtos, novidades e entrega rápida.", tag:"LOJA"},
-    "Serviços": {t:"Serviço bem feito, do orçamento à entrega.", s:"O que fazemos, onde atendemos e como chamar.", tag:"SERVIÇOS"}
-  };
-  const cores = [
-    {bg:"#FBD5C2", tx:"#0E1B2C", bar:"#ffffff", bt:"#0E1B2C", g:"#f3e6dc"},
-    {bg:"#0E1B2C", tx:"#F3EDE4", bar:"#0E1B2C", bt:"#F3EDE4", g:"#e6e9ee"},
-    {bg:"#2F5D50", tx:"#F3EDE4", bar:"#ffffff", bt:"#2F5D50", g:"#e2ebe7"},
-    {bg:"#5A3523", tx:"#F6EBDD", bar:"#3B2418", bt:"#F6EBDD", g:"#efe4d6"},
-    {bg:"#E9C46A", tx:"#2B2118", bar:"#ffffff", bt:"#2B2118", g:"#f5ecd4"}
-  ];
-  let ramo = "Café / Restaurante", cor = 0;
-  const $ = id => document.getElementById(id);
-  const fone = $("sim-fone"), nomeIn = $("nome");
-  const chips = $("ramos"), boxCores = $("cores");
-  Object.keys(ramos).forEach((r,k) => { const b = document.createElement("button"); b.className = "chip" + (k ? "" : " on"); b.textContent = r; b.type = "button";
-    b.onclick = () => { ramo = r; chips.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === b)); render(true); }; chips.appendChild(b); });
-  cores.forEach((c,k) => { const b = document.createElement("button"); b.className = "cor" + (k ? "" : " on"); b.style.background = c.bg; b.type = "button"; b.setAttribute("aria-label","Cor " + (k+1));
-    b.onclick = () => { cor = k; boxCores.querySelectorAll(".cor").forEach(x => x.classList.toggle("on", x === b)); render(true); }; boxCores.appendChild(b); });
-  function render(pop){
-    const r = ramos[ramo], c = cores[cor], nome = nomeIn.value.trim() || "Sua Empresa";
-    $("s-nome").textContent = nome; $("s-titulo").textContent = r.t; $("s-sub").textContent = r.s; $("s-local").textContent = r.tag;
-    $("s-capa").style.background = c.bg; $("s-capa").style.color = c.tx; $("s-titulo").style.color = c.tx;
-    $("s-bar").style.background = c.bar; $("s-bar").style.color = c.bt;
-    $("s-grid").querySelectorAll("div").forEach(d => d.style.background = c.g);
-    if (pop) { fone.classList.remove("pop"); void fone.offsetWidth; fone.classList.add("pop"); }
-    $("sim-cta").dataset.zap = "Oi, Gustavo! Simulei na sua página um site para " + (nomeIn.value.trim() ? "\"" + nome + "\"" : "a minha empresa") + " (" + ramo + ") e quero saber mais.";
-    $("sim-cta").href = zap($("sim-cta").dataset.zap);
-  }
-  nomeIn.addEventListener("input", () => render(false));
-  $("sim-cta").addEventListener("click", e => { e.preventDefault(); window.open(zap($("sim-cta").dataset.zap), "_blank", "noopener"); });
-  render(false);
-})();
 
 /* abas de pacotes */
 (() => {
