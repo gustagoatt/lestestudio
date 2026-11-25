@@ -221,7 +221,9 @@ section{position:relative}
 .case .fone{position:relative;height:300px;border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0;transition:transform .6s var(--ease)}
 .case:hover .fone{transform:translateY(-10px)}
 .case .fone .tela{border-bottom-left-radius:0;border-bottom-right-radius:0}
-.case .txt{padding:28px}
+.case .txt{padding:28px;display:flex;flex-direction:column}
+.case .txt p{flex:1}
+.case .ver{align-self:flex-start}
 .case .txt .tag{color:var(--nevoa)}
 .case h3{font-family:Syne,Inter,sans-serif;font-size:28px;line-height:1.1;margin:10px 0 8px}
 .case p{color:var(--nevoa);font-size:15.5px}
@@ -316,7 +318,6 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .nota-pag{grid-template-columns:1fr 1fr}
   .artes{grid-template-columns:repeat(5,1fr)}
   .quiz{padding:44px}
-  .cases{grid-template-columns:repeat(3,1fr)}
   .quem{grid-template-columns:auto 1fr;gap:44px}
   .passos{grid-template-columns:repeat(5,1fr);padding-left:0;padding-top:52px;gap:20px}
   .passos .trilho{left:16px;right:16px;top:15px;bottom:auto;width:auto;height:3px}
@@ -324,6 +325,13 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .passo .n{left:0;top:-52px}
   .sec{padding:120px 0}
 }
+@media (min-width:640px) and (max-width:1079px){
+  .case{grid-template-columns:300px minmax(0,1fr);grid-template-rows:auto;min-height:0}
+  .case .pal{min-height:360px}
+  .case .txt{align-self:center;padding:32px 36px}
+  .case .txt p{flex:none}
+}
+@media (min-width:1080px){.cases{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .rv{opacity:1;transform:none}
@@ -580,7 +588,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         <div class="txt">
           <span class="tag">Landing page · Café gourmet</span>
           <h3>Cafézin Especial</h3>
-          <p>Página com vídeo de fundo, a linha de cafés em cards deslizáveis e pedido direto pelo WhatsApp.</p>
+          <p>Vídeo de fundo, a linha de cafés em cards deslizáveis e pedido direto pelo WhatsApp.</p>
           <a class="ver" href="https://cafezinespecial.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -597,7 +605,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
         <div class="txt">
           <span class="tag">Landing page · Odontologia</span>
           <h3>Dra. Mariana Pinotti</h3>
-          <p>Site para consultório com foto de fora a fora, caso real de antes e depois e agendamento pelo WhatsApp.</p>
+          <p>Foto de fora a fora, caso real de antes e depois e agendamento direto pelo WhatsApp.</p>
           <a class="ver" href="https://dramarianapinotti.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -606,15 +614,15 @@ footer a{text-decoration:underline;text-underline-offset:3px}
           <div class="fone">
             <div class="tela">
               <div class="bar" style="background:#2E2A27;color:#E9D9B8">Fernanda Agostini<i></i></div>
-              <div class="capa" style="background:#4A403A;color:#F3ECE2;min-height:150px"><small style="font-weight:700;letter-spacing:.08em;color:#D9BE8A">HARMONIZAÇÃO</small><b style="color:#F3ECE2">Sua beleza, com naturalidade.</b><span class="zap">Agendar avaliação</span></div>
+              <div class="capa" style="background:#4A403A;color:#F3ECE2;min-height:150px"><small style="font-weight:700;letter-spacing:.08em;color:#D9BE8A">ESTÉTICA</small><b style="color:#F3ECE2">Sua beleza, com naturalidade.</b><span class="zap">Agendar avaliação</span></div>
               <div class="grid"><div style="background:#E4DDD4"></div><div style="background:#E4DDD4"></div></div>
             </div>
           </div>
         </div>
         <div class="txt">
-          <span class="tag">Landing page · Harmonização</span>
+          <span class="tag">Landing page · Estética</span>
           <h3>Clínica Fernanda Agostini</h3>
-          <p>Site para clínica de harmonização facial e corporal, com a identidade da marca e agendamento direto pelo WhatsApp.</p>
+          <p>Clínica de estética com a identidade da marca, procedimentos organizados e agendamento pelo WhatsApp.</p>
           <a class="ver" href="https://drafernandaagostini.com.br" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
